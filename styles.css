@@ -1,0 +1,581 @@
+/*~~~~~~~~~~RESET~~~~~~~~~~~~~~~*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~STYLES ~~~~~~~~~~~ */
+
+/*STARTING PAGE*/
+html,body
+{
+    background-image: linear-gradient(rgba(17, 153, 142, 0.88),rgba(56, 239, 125, 1));
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+    background-attachment: fixed;
+}
+body
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.st_page
+{
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+}
+.st_page > p
+{
+    font-size: 34;
+    margin-top: 0;
+    margin-bottom: 8;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.logo
+{
+    margin-top: 10;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
+}
+.login
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.skip
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.buttons > .skip > a > button
+{
+    width: 314;
+    margin-top: 15;
+    margin-left: 4;
+    font-size: 20;
+}
+.loggedin
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.about
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 14px;
+}
+.about_p
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:200px ;
+}
+.about_p > p
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 28px;
+}
+
+
+/*LOGIN AND REGISTER BUTTONS*/
+
+.register-form > form > .forgot
+{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.register-form > form > .forgot > a
+{
+    font-size: 20;
+}
+.login > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.login > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.login > a > button:focus   
+{
+    outline: none;
+}
+.skip > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    float: right;
+}
+.skip > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.skip > a > button:focus   
+{
+    outline: none;
+}
+.loggedin > a > button
+{
+    width: 150px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+}
+.loggedin > a > button:hover {
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.loggedin > a > button:focus   
+{
+    outline: none;
+}
+.data-calc > form > .butoane_calc > button
+{
+    width: max-content;
+    padding-left: 38;
+    padding-right: 38;
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    margin-top: 20;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+}
+.data-calc > form > .butoane_calc > button:hover
+{
+    cursor: pointer;
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+}
+
+.data-calc > form
+{
+    margin-bottom: 170px;
+}
+
+.data-calc
+{
+    width: 450;
+    position: absolute;
+    top: 70;
+    left: 535;
+}
+.data-calc > form > input
+{
+    width: 120%;
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+
+
+
+/*HOME & USER BUTTON*/
+.home > a > button
+{
+  text-decoration: none;
+    outline: none;
+  border-width: 0;
+  background-color: transparent;
+}
+.home > a > button:hover
+{
+    cursor: pointer;
+}
+.home
+{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.butoane
+{
+    display: flex;
+    justify-content: space-between;
+}
+.butoane > .logout >  ul >li > a > button
+{
+    width: 200px;
+    /*vertical-align: middle;
+    padding-left: 38;
+    padding-right: 38;*/
+    padding-top: 3.5;
+    padding-bottom: 3.5;
+    background-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 6px;
+    margin-top: 15;
+    float: right;
+}
+.butoane > .logout > ul >li > a > button:hover
+{
+    box-shadow: 0 0 0 -2px black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.butoane > .logout > ul > li
+{
+    display: block;
+}
+
+.butoane > .logout > ul
+{
+    margin-top: 50;
+    opacity: 0;
+}
+.butoane > .logout > ul:hover
+{
+    opacity: 1;
+}
+.logout > a > button
+{
+  text-decoration: none;
+    outline: none;
+  border-width: 0;
+  background-color: transparent;
+  float: right;
+}
+.logout > a > button:hover
+{
+    cursor: pointer; 
+}
+.logout
+{
+    padding-right: 20px;
+    padding-top: 25px;
+    display: block;
+}
+
+
+/*SIGNUP AND LOGIN FORMS*/
+.register-form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    outline: 5px yellow;
+}
+.register-form > form > input
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.register-form > form > button
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    padding-top: 30px;
+    border-radius: 6px;
+    border: solid 1px black;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.register-form > p
+{
+    padding-right: 183px;
+    padding-bottom: 20px;
+}
+.register-form > .already
+{
+    display: flexbox;
+    padding-top: 20px;
+
+}
+.register-form > .already > p,a
+{
+    font-size: 20;
+    text-decoration: none;
+}
+.register-form > .already > p
+{
+    float: left;
+    padding-right: 5px;
+}
+.register-form > .already > a
+{
+    float: right;
+}
+.emptyinput
+{
+    margin-top:500 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emptyinput > p
+{
+    font-size: 30;
+    margin-top: 10px;
+}
+.wronglogin
+{
+    margin-top:30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wronglogin > p
+{
+    font-size: 30;
+    margin-top: 5px;
+}
+
+/*FORGOT PASSWORD FORM*/
+.forgot-form
+{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+}
+.forgot-form > form > input
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 6px;
+    border: solid 1px black;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.forgot-form > form > button
+{
+    font-family: 'Quicksand', sans-serif;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    padding-top: 30px;
+    border-radius: 6px;
+    border: solid 1px black;
+    padding-bottom: 15px;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 22;
+    background: white;
+    outline: 0;
+}
+.forgot-form > form > button :hover
+{
+    cursor: pointer;
+}
+.forgot-form>p
+{
+    font-size: 26;
+    padding-bottom: 20px;
+}
+
+#hw-table
+{
+    display: none;
+    padding-top: 50;
+    float: right;
+    margin-right: 20px;
+    font-size: 16;
+}
+#hw-table > table > tr,td{
+    width: 30;
+    padding-left: 15;
+}
+.verif
+{
+    margin-top: 400;
+}
+
